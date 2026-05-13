@@ -1,0 +1,127 @@
+/* Podium */
+.podium-row {
+  display: flex; align-items: flex-end; justify-content: center;
+  gap: 16px; margin-bottom: 0; padding: 28px 20px;
+  background: linear-gradient(135deg, #f0f4ff, #fef9e7);
+  border-radius: 16px;
+}
+.podium-block {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 6px; padding: 16px 20px;
+  border-radius: 14px;
+  min-width: 120px;
+  transition: transform 0.2s;
+}
+.podium-block:hover { transform: translateY(-4px); }
+.place-1 { background: linear-gradient(135deg, #fffbea, #fef3c7); border: 2px solid #FFD700; padding-bottom: 24px; }
+.place-2 { background: linear-gradient(135deg, #f5f5f7, #ececef); border: 2px solid #d0d0e0; }
+.place-3 { background: linear-gradient(135deg, #fdf0e0, #fde8c8); border: 2px solid #e8b080; }
+.is-me { box-shadow: 0 0 0 3px var(--primary); }
+
+.podium-avatar {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent2));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; font-weight: 800; color: white;
+  position: relative;
+}
+.podium-role-badge { position: absolute; bottom: -2px; right: -2px; font-size: 0.85rem; }
+.podium-medal { font-size: 1.6rem; }
+.podium-name { font-weight: 700; font-size: 0.9rem; text-align: center; }
+.podium-xp { font-size: 0.78rem; color: var(--primary); font-weight: 600; }
+
+/* Leaderboard extras */
+.my-row td { background: linear-gradient(90deg, rgba(91,79,232,0.05), transparent); }
+.lb-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent2));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700; color: white;
+  flex-shrink: 0;
+}
+.me-tag {
+  font-size: 0.7rem; font-weight: 800; color: var(--primary);
+  background: var(--primary-light); padding: 2px 7px; border-radius: 10px;
+}
+.role-pill {
+  padding: 3px 10px; border-radius: 20px;
+  font-size: 0.75rem; font-weight: 600;
+}
+.role-pill.student { background: #dbeafe; color: #1d4ed8; }
+.role-pill.instructor { background: #fef3c7; color: #d97706; }
+
+/* Badges grid */
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.badge-card {
+  padding: 20px 16px;
+  border-radius: 14px;
+  text-align: center;
+  border: 2px solid;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.badge-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.badge-card.locked { opacity: 0.45; filter: grayscale(0.7); }
+
+.badge-tier-bronze { background: #fdf0e0; border-color: #f5c89e; }
+.badge-tier-silver { background: #f5f5f7; border-color: #d0d0e0; }
+.badge-tier-gold { background: #fffbea; border-color: #ffd700; }
+.badge-tier-platinum { background: #e8f0fe; border-color: #b0c4de; }
+.badge-tier-special { background: linear-gradient(135deg, #fce7f3, #ede9fe); border-color: #d8b4fe; }
+
+.badge-card-icon { font-size: 2.2rem; margin-bottom: 8px; }
+.badge-card-name { font-weight: 700; font-size: 0.88rem; color: var(--text); margin-bottom: 5px; }
+.badge-card-desc { font-size: 0.75rem; color: var(--muted); line-height: 1.4; margin-bottom: 10px; }
+.badge-card-footer { display: flex; justify-content: space-between; align-items: center; }
+.badge-earned-check {
+  position: absolute; top: 10px; right: 10px;
+  width: 22px; height: 22px; background: #10b981; border-radius: 50%;
+  color: white; font-size: 0.8rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Certificates */
+.cert-card {
+  border: 2px solid #e8d5b0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fef9f0, #fffdf5);
+  box-shadow: var(--shadow-md);
+}
+.cert-top {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #5B4FE8, #7C6FF7);
+  color: white;
+}
+.cert-seal {
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
+}
+.cert-platform-name { font-weight: 800; font-size: 1rem; }
+.cert-tagline { font-size: 0.72rem; opacity: 0.85; }
+.cert-grade { margin-left: auto; font-size: 1rem; font-weight: 800; background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; }
+.cert-body-main { padding: 24px; text-align: center; }
+.cert-presented { font-size: 0.82rem; color: var(--muted); margin-bottom: 6px; }
+.cert-name { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.cert-for { font-size: 0.82rem; color: var(--muted); margin-bottom: 8px; }
+.cert-course-name { font-size: 1.05rem; font-weight: 700; color: var(--primary); margin-bottom: 12px; }
+.cert-level { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.cert-footer-row {
+  display: flex; justify-content: space-between;
+  padding: 14px 20px;
+  border-top: 1px dashed #e5d5b0;
+  background: rgba(0,0,0,0.02);
+}
+.cert-detail-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 3px; }
+.cert-detail-val { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+.mono { font-family: monospace; font-size: 0.75rem; }
+
+@media (max-width: 900px) { .badges-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .badges-grid { grid-template-columns: repeat(2, 1fr); } }

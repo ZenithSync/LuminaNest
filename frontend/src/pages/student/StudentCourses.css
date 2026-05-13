@@ -1,0 +1,14 @@
+.filter-pill {
+  padding: 7px 16px;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: white;
+  color: var(--muted);
+  font-size: 0.82rem; font-weight: 600;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.18s;
+}
+.filter-pill:hover { border-color: var(--primary); color: var(--primary); }
+.filter-pill.active { background: var(--primary); color: white; border-color: var(--primary); }
+.filter-pill.level.active { background: var(--accent2); border-color: var(--accent2); }

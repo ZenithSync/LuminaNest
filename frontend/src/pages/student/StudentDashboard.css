@@ -1,0 +1,68 @@
+.page-heading {
+  font-size: 1.75rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.welcome-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.rank-badge-big {
+  display: flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, #fff8e1, #fff3e0);
+  border: 2px solid #FFB800;
+  border-radius: 14px;
+  padding: 12px 18px;
+}
+.rank-badge-big span { font-size: 1.8rem; }
+
+/* Level card */
+.level-card {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.level-card-left { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.level-card-right { flex: 1; }
+
+.level-orb {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5B4FE8, #FF6B6B);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(91,79,232,0.3);
+}
+.level-num { font-size: 1.4rem; font-weight: 800; color: white; font-family: 'Playfair Display', serif; }
+.level-name { font-size: 1rem; font-weight: 700; color: var(--text); }
+
+/* Badges row */
+.badges-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.badge-big {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  min-width: 80px;
+  cursor: default;
+  transition: transform 0.2s;
+}
+.badge-big:hover { transform: translateY(-3px); }
+
+.badge-big.badge-bronze { background: #fdf0e0; border: 1.5px solid #f5c89e; }
+.badge-big.badge-silver { background: #f5f5f7; border: 1.5px solid #d0d0e0; }
+.badge-big.badge-gold { background: #fffbea; border: 1.5px solid #ffd700; }
+.badge-big.badge-platinum { background: #e8f0fe; border: 1.5px solid #b0c4de; }
+.badge-big.badge-special { background: linear-gradient(135deg, #fce7f3, #ede9fe); border: 1.5px solid #d8b4fe; }
+
+.badge-big-icon { font-size: 1.8rem; }
+.badge-big-name { font-size: 0.7rem; font-weight: 600; color: var(--text); text-align: center; }
