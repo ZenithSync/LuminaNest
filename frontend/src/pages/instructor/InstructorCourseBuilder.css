@@ -1,0 +1,87 @@
+.content-type-grid {
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.content-type-btn {
+  padding: 7px 14px; border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: white; color: var(--muted);
+  font-size: 0.82rem; font-weight: 600;
+  cursor: pointer; font-family: 'DM Sans', sans-serif;
+  transition: all 0.18s;
+}
+.content-type-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+.upload-zone {
+  border: 2px dashed var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background: var(--bg);
+  cursor: pointer;
+  transition: border-color 0.18s;
+}
+.upload-zone:hover { border-color: var(--primary); }
+.upload-label {
+  display: block; font-size: 0.9rem; font-weight: 500;
+  color: var(--muted); cursor: pointer;
+}
+
+.quiz-builder-toggle {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 14px;
+  background: #fffbea;
+  border: 1.5px solid #ffd700;
+  border-radius: 10px;
+  cursor: pointer; margin-top: 4px;
+  font-weight: 600; font-size: 0.88rem;
+  transition: background 0.18s;
+}
+.quiz-builder-toggle:hover { background: #fef3c7; }
+
+.quiz-builder {
+  margin-top: 12px;
+  padding: 16px;
+  background: #f9f8ff;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quiz-q-editor {
+  background: white;
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid var(--border);
+}
+
+.lesson-row-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px;
+  background: var(--bg);
+  border-radius: 10px;
+  transition: background 0.18s;
+}
+.lesson-row-item:hover { background: var(--primary-light); }
+
+.lesson-row-num {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white; font-size: 0.8rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.tab-btn {
+  padding: 10px 18px; border-radius: 10px 10px 0 0;
+  border: none; background: transparent;
+  font-size: 0.88rem; font-weight: 600;
+  cursor: pointer; color: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.18s;
+  border-bottom: 3px solid transparent;
+}
+.tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+.tab-btn:hover { color: var(--primary); background: var(--primary-light); }
