@@ -1,6 +1,6 @@
 # 🌌 LuminaNest
 
-> **A Product of ZenithSync**
+> **A Product of ZenithSync**  
 > A collaborative, gamified E-Learning Management System (LMS) built using the MERN stack. Features role-based dual dashboards, an automated rewards engine, and high-performance real-time analytics dashboards.
 
 ---
@@ -15,10 +15,10 @@ The platform features a fluid, responsive frontend with a custom visual system, 
 
 ## 🛠 Tech Stack
 
-* **Frontend:** React.js, React Router v6, Context API, CSS3 (Modular Custom Variables)
-* **Backend:** Node.js, Express.js, RESTful API Architecture
-* **Database:** MongoDB, Mongoose ODM
-* **Tools & Security:** JWT (JSON Web Tokens), BCrypt, Multer Middleware, Git/GitHub Organization Workflow
+- **Frontend:** React.js, React Router v6, Context API, CSS3 (Modular Custom Variables)
+- **Backend:** Node.js, Express.js, RESTful API Architecture
+- **Database:** MongoDB, Mongoose ODM
+- **Tools & Security:** JWT (JSON Web Tokens), BCrypt, Multer Middleware, Git/GitHub Organization Workflow
 
 ---
 
@@ -40,19 +40,19 @@ To maintain an industry-standard production workflow, development was divided do
 
 ### 👤 Niveditha's Codebase Footprint
 
-* **Frontend Core & Context:** `frontend/src/App.js`, `frontend/src/index.js`, `frontend/src/context/AuthContext.js`
-* **Student Portals:** `frontend/src/pages/student/*` (Dashboard, CourseDetail, Leaderboard, Badges, Certificates)
-* **Visual Style Engine:** `frontend/src/App.css`, `frontend/src/pages/*.css` (AuthPages, LandingPage, SharedStyles)
-* **Algorithmic Backend:** `backend/routes/quiz.js`, `backend/routes/badges.js`, `backend/routes/leaderboard.js`, `backend/routes/certificates.js`
-* **Game Schemas:** `backend/models/Badge.js`, `backend/models/Certificate.js`
+- **Frontend Core & Context:** `frontend/src/App.js`, `frontend/src/index.js`, `frontend/src/context/AuthContext.js`
+- **Student Portals:** `frontend/src/pages/student/*` (Dashboard, CourseDetail, Leaderboard, Badges, Certificates)
+- **Visual Style Engine:** `frontend/src/App.css`, `frontend/src/pages/*.css` (AuthPages, LandingPage, SharedStyles)
+- **Algorithmic Backend:** `backend/routes/quiz.js`, `backend/routes/badges.js`, `backend/routes/leaderboard.js`, `backend/routes/certificates.js`
+- **Game Schemas:** `backend/models/Badge.js`, `backend/models/Certificate.js`
 
 ### 👤 Karthikeyan's Codebase Footprint
 
-* **Infrastructure Entry:** `backend/server.js`, `backend/package.json`, `backend/middleware/auth.js`
-* **Instructor Portals:** `frontend/src/pages/instructor/*` (CourseBuilder, InstructorDashboard)
-* **Core Systems Routing:** `backend/routes/auth.js`, `backend/routes/courses.js`, `backend/routes/dashboard.js`, `backend/routes/instructor.js`
-* **System Schemas:** `backend/models/User.js`, `backend/models/Course.js`, `backend/models/Progress.js`
-* **Shared UI Elements:** `frontend/src/components/shared/Sidebar.js`
+- **Infrastructure Entry:** `backend/server.js`, `backend/package.json`, `backend/middleware/auth.js`
+- **Instructor Portals:** `frontend/src/pages/instructor/*` (CourseBuilder, InstructorDashboard)
+- **Core Systems Routing:** `backend/routes/auth.js`, `backend/routes/courses.js`, `backend/routes/dashboard.js`, `backend/routes/instructor.js`
+- **System Schemas:** `backend/models/User.js`, `backend/models/Course.js`, `backend/models/Progress.js`
+- **Shared UI Elements:** `frontend/src/components/shared/Sidebar.js`
 
 ---
 
@@ -60,15 +60,14 @@ To maintain an industry-standard production workflow, development was divided do
 
 ### Prerequisites
 
-* Node.js (v16.x or higher)
-* MongoDB Atlas account or local MongoDB instance
+- Node.js (v16.x or higher)
+- MongoDB Atlas account or local MongoDB instance
 
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/ZenithSync/LuminaNest.git
 cd LuminaNest
-
 ```
 
 ### 2. Backend Configuration
@@ -78,7 +77,6 @@ Navigate to the backend directory, install the server dependencies, and configur
 ```bash
 cd backend
 npm install
-
 ```
 
 Create a `.env` file in the root of your `backend/` directory and configure the following variables:
@@ -87,7 +85,6 @@ Create a `.env` file in the root of your `backend/` directory and configure the 
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_signing_secret_key
-
 ```
 
 Start the local API development server:
@@ -95,7 +92,6 @@ Start the local API development server:
 ```bash
 npm run dev
 # Or 'node server.js' depending on your package configuration
-
 ```
 
 ### 3. Frontend Configuration
@@ -106,7 +102,6 @@ Open a secondary terminal workspace, navigate to the frontend folder, install de
 cd frontend
 npm install
 npm start
-
 ```
 
 The application will launch on `http://localhost:3000` automatically.
@@ -118,6 +113,6 @@ The application will launch on `http://localhost:3000` automatically.
 > [!NOTE]
 > **Deployment Status:** Cloud deployment pipelines are currently being provisioned. The live production instance urls for the student app and instructor console are coming soon.
 
-* **Role-Based Access Control (RBAC):** Restricts interface accessibility natively on the client using React state context while enforcing API protection at the backend routing level using JWT evaluation layers.
-* **Advanced MongoDB Aggregation:** Optimizes database pipeline calls for the competitive leaderboard workspace, transforming tabular student telemetry into sorted, active ranking matrices efficiently.
-* **Dynamic Document Viewers:** Implements client interface evaluation scripts allowing the same player module to smoothly switch visual frames depending on incoming MIME media types (MP4, PDF, or YouTube endpoints).
+- **Role-Based Access Control (RBAC):** Restricts interface accessibility natively on the client using React state context while enforcing API protection at the backend routing level using JWT evaluation layers.
+- **Advanced MongoDB Aggregation:** Optimizes database pipeline calls for the competitive leaderboard workspace, transforming tabular student telemetry into sorted, active ranking matrices efficiently.
+- **Dynamic Document Viewers:** Implements client interface evaluation scripts allowing the same player module to smoothly switch visual frames depending on incoming MIME media types (MP4, PDF, or YouTube endpoints).
