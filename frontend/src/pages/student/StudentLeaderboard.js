@@ -36,7 +36,7 @@ const StudentLeaderboard = () => {
         <div className="welcome-row" style={{ marginBottom: 24 }}>
           <div>
             <h1 className="page-heading">🏆 Leaderboard</h1>
-            <p style={{ color: 'var(--muted)', fontSize: '0.9rem' }}>Students & Instructors compete together!</p>
+            <p style={{ color: 'var(--muted)', fontSize: '0.9rem' }}>See how you rank among fellow students!</p>
           </div>
           {myRank > 0 && (
             <div style={{ background: 'linear-gradient(135deg, #5B4FE8, #7C6FF7)', borderRadius: 14, padding: '12px 20px', color: 'white', textAlign: 'center' }}>
@@ -57,7 +57,6 @@ const StudentLeaderboard = () => {
                 <div key={i} className={`podium-block place-${place} ${isMe ? 'is-me' : ''}`}>
                   <div className="podium-avatar">
                     {entry.name?.substring(0,2).toUpperCase()}
-                    <div className="podium-role-badge">{entry.role === 'instructor' ? '🎓' : '📘'}</div>
                   </div>
                   <div className="podium-medal">{medals[place - 1]}</div>
                   <div className="podium-name">{entry.name}</div>
@@ -85,7 +84,6 @@ const StudentLeaderboard = () => {
                 <tr>
                   <th>Rank</th>
                   <th>Player</th>
-                  <th>Role</th>
                   <th>{tab === 'global' ? 'XP' : 'Weekly XP'}</th>
                   <th>Level</th>
                   {tab === 'global' && <th>Streak</th>}
@@ -106,11 +104,6 @@ const StudentLeaderboard = () => {
                           <span style={{ fontWeight: 600 }}>{entry.name}</span>
                           {isMe && <span className="me-tag">YOU</span>}
                         </div>
-                      </td>
-                      <td>
-                        <span className={`role-pill ${entry.role}`}>
-                          {entry.role === 'instructor' ? '🎓 Instructor' : '📘 Student'}
-                        </span>
                       </td>
                       <td><span style={{ fontWeight: 700, color: 'var(--primary)' }}>⚡ {(entry.xp || entry.weeklyXp || 0).toLocaleString()}</span></td>
                       <td><span style={{ fontWeight: 600 }}>{LEVEL_NAMES[entry.level] || 'Novice'}</span></td>

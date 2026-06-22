@@ -13,7 +13,7 @@ const studentNav = [
 const instructorNav = [
   { label: 'Dashboard', icon: '⊞', path: '/instructor/dashboard' },
   { label: 'My Courses', icon: '📖', path: '/instructor/courses' },
-  { label: 'Leaderboard', icon: '🏆', path: '/instructor/leaderboard' },
+  { label: 'Student Leaderboard', icon: '🏆', path: '/instructor/leaderboard' },
 ];
 
 const Sidebar = () => {

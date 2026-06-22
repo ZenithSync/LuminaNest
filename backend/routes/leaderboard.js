@@ -3,10 +3,10 @@ const router = express.Router();
 const User = require('../models/User');
 const auth = require('../middleware/auth');
 
-// Global leaderboard (students + instructors compete!)
+// Global leaderboard (students only)
 router.get('/', auth, async (req, res) => {
   try {
-    const users = await User.find({}, 'name xp level streak quizzesTaken role badges completedCourses')
+    const users = await User.find({ role: 'student' }, 'name xp level streak quizzesTaken role badges completedCourses')
       .populate('badges', 'icon name tier')
       .sort({ xp: -1 })
       .limit(50);
@@ -44,8 +44,11 @@ router.get('/weekly', auth, async (req, res) => {
     const weekAgo = new Date();
     weekAgo.setDate(weekAgo.getDate() - 7);
 
+    // Only include students in the weekly aggregation
+    const studentIds = await User.find({ role: 'student' }).distinct('_id');
+
     const weeklyScores = await QuizAttempt.aggregate([
-      { $match: { createdAt: { $gte: weekAgo } } },
+      { $match: { createdAt: { $gte: weekAgo }, user: { $in: studentIds } } },
       { $group: { _id: '$user', weeklyXp: { $sum: '$xpEarned' }, quizzes: { $sum: 1 } } },
       { $sort: { weeklyXp: -1 } },
       { $limit: 20 }
