@@ -38,15 +38,21 @@ To maintain an industry-standard production workflow, development was divided do
 
 ## 📂 Architectural File Ownership
 
-This project was a collaborative Full-Stack effort by:
+### 👤 Niveditha's Codebase Footprint
 
-| Developer | Contribution | Profile |
-| :--- | :--- | :--- |
-| **Niveditha Balaji** | Full-Stack Development (MERN), UI/UX Design, Gamification Logic | [🔗 GitHub](https://github.com/NIVEDITHABALAJI) |
-| **Karthikeyan D K** | Full-Stack Development (MERN), API Architecture, Database Security | [🔗 GitHub](https://github.com/Karthikeyandk) |
+- **Frontend Core & Context:** `frontend/src/App.js`, `frontend/src/index.js`, `frontend/src/context/AuthContext.js`
+- **Student Portals:** `frontend/src/pages/student/*` (Dashboard, CourseDetail, Leaderboard, Badges, Certificates)
+- **Visual Style Engine:** `frontend/src/App.css`, `frontend/src/pages/*.css` (AuthPages, LandingPage, SharedStyles)
+- **Algorithmic Backend:** `backend/routes/quiz.js`, `backend/routes/badges.js`, `backend/routes/leaderboard.js`, `backend/routes/certificates.js`
+- **Game Schemas:** `backend/models/Badge.js`, `backend/models/Certificate.js`
 
-*Both developers contributed equally to the Frontend (React), Backend (Node/Express), and Database Design (MongoDB).*
+### 👤 Karthikeyan's Codebase Footprint
 
+- **Infrastructure Entry:** `backend/server.js`, `backend/package.json`, `backend/middleware/auth.js`
+- **Instructor Portals:** `frontend/src/pages/instructor/*` (CourseBuilder, InstructorDashboard)
+- **Core Systems Routing:** `backend/routes/auth.js`, `backend/routes/courses.js`, `backend/routes/dashboard.js`, `backend/routes/instructor.js`
+- **System Schemas:** `backend/models/User.js`, `backend/models/Course.js`, `backend/models/Progress.js`
+- **Shared UI Elements:** `frontend/src/components/shared/Sidebar.js`
 
 ---
 
